@@ -1,38 +1,85 @@
-# simple-skeleton
+# Project Title
 
-Create a bare-bones application that I can modify and build on.
+This project is built using Spring Boot, Thymeleaf, and Docker. It provides a minimal web application structure that you can modify and build upon.
 
-## Collaborate with GPT Engineer
+## Technologies Used
 
-This is a [gptengineer.app](https://gptengineer.app)-synced repository 🌟🤖
+- **Spring Boot**: A framework for building production-ready applications in Java.
+- **Thymeleaf**: A modern server-side Java template engine for web and standalone environments.
+- **Docker**: A platform for developing, shipping, and running applications inside containers.
 
-Changes made via gptengineer.app will be committed to this repo.
+## Prerequisites
 
-If you clone this repo and push changes, you will have them reflected in the GPT Engineer UI.
+Before you begin, ensure you have the following installed on your machine:
 
-## Tech stack
+- Java Development Kit (JDK) 11 or higher
+- Docker
+- Maven
 
-This project is built with React with shadcn-ui and Tailwind CSS.
+## Getting Started
 
-- Vite
-- React
-- shadcn-ui
-- Tailwind CSS
+### Clone the Repository
 
-## Setup
-
-```sh
-git clone https://github.com/GPT-Engineer-App/simple-skeleton.git
-cd simple-skeleton
-npm i
+```bash
+git clone https://github.com/your-repo/project-name.git
+cd project-name
 ```
 
-```sh
-npm run dev
+### Build the Project
+
+Use Maven to build the project:
+
+```bash
+mvn clean install
 ```
 
-This will run a dev server with auto reloading and an instant preview.
+### Run the Application
 
-## Requirements
+You can run the application using Maven:
 
-- Node.js & npm - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+```bash
+mvn spring-boot:run
+```
+
+Alternatively, you can build a Docker image and run it inside a container:
+
+```bash
+# Build the Docker image
+docker build -t project-name .
+
+# Run the Docker container
+docker run -p 8080:8080 project-name
+```
+
+### Access the Application
+
+Once the application is running, you can access it at `http://localhost:8080`.
+
+## Project Structure
+
+```plaintext
+src/
+├── main/
+│   ├── java/
+│   │   └── com/
+│   │       └── example/
+│   │           └── demo/
+│   │               ├── DemoApplication.java
+│   │               └── controller/
+│   │                   └── HomeController.java
+│   ├── resources/
+│   │   └── templates/
+│   │       └── index.html
+│   └── docker/
+│       └── Dockerfile
+└── test/
+    └── java/
+        └── com/
+            └── example/
+                └── demo/
+                    └── DemoApplicationTests.java
+```
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
